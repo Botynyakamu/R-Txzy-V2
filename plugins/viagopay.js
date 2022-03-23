@@ -20,9 +20,6 @@ let info = `╠═〘 PEMBAYARAN 〙 ═
 ╠➥ *DAN 200 LEBIH*
 ║   *FITUR LAINNYA*
 ║ 
-╠═ ©2021 wabot-aq
-╠═ Scrip original by Nurutomo
-╠═〘 R-Txzy 〙 ═
 `.trim()
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*Sewa Bot*', 'status@broadcast') 
