@@ -15,8 +15,8 @@ handler.all = async function (m, { isBlocked }) {
     try {
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
             await this.send2Button(m.chat,
-                isBanned ? 'R-Txzy tidak aktif' : banned ? 'kamu dibanned' : 'R-Txzy disini',
-                '©R-Txzy',
+                isBanned ? 'fazibotz tidak aktif' : banned ? 'kamu dibanned' : 'fazibotz disini',
+                '©fazibotz',
                 isBanned ? 'Unban' : banned ? 'Pemilik Bot' : 'Menu',
                 isBanned ? '.unban' : banned ? '.owner' : '.?',
                 m.isGroup ? 'Ban' : isBanned ? 'Unban' : 'Donasi',
@@ -29,10 +29,9 @@ handler.all = async function (m, { isBlocked }) {
     // ketika ada yang invite/kirim link grup di chat pribadi
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
         this.send2ButtonLoc(m.chat, await (await fetch(fla + 'sewa bot')).buffer(), `╠═〘 Beli Bot 〙 ═
-╠➥ *1 Bulan* :      *Rp 10000*
-╠➥ *Permanen* : *Rp 15000*
-╠➥ *Premium* :   *Rp 15000*
-╠➥ *Sc Bot* :        *Masih Beta*
+╠➥ *1 Bulan* :      *Rp 15000*
+╠➥ *4 Bulan* : *Rp 30000*
+╠➥ *8 Bulan* :   *Rp 40000*
 ║
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Dana, Dan Pulsa
@@ -40,9 +39,7 @@ handler.all = async function (m, { isBlocked }) {
 ╠═ Tertarik Untuk Beli Bot Ini?
 ╠➥Ketuk Tombol Di Bawah Ya
 ║
-╠═ ©2021 Rpg wabot-aq
-╠═ Script original by Nurutomo
-╠═〘 R-TXZY〙 ═`.trim(), '© R-Txzy', 'Gopay', '#viadana', 'Pulsa', '#viapulsa', m)
+╠═〘 fazibotz 〙 ═`.trim(), '© fazibotz', 'Dana', '#viadana', 'Pulsa', '#viapulsa', m)
 }
 
     // salam
@@ -72,7 +69,7 @@ handler.all = async function (m, { isBlocked }) {
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setStatus(`💠 Aktif selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} |Botz by R-Txzy Team`).catch(_ => _)
+        await this.setStatus(`💠 Aktif selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} |Botz by fazibotz Team`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
